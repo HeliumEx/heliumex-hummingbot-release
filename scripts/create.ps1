@@ -56,6 +56,9 @@ mkdir (Join-Path $FOLDER "hummingbot_conf")
 mkdir (Join-Path $FOLDER "hummingbot_logs")
 mkdir (Join-Path $FOLDER "hummingbot_data")
 mkdir (Join-Path $FOLDER "hummingbot_scripts")
+
+docker pull heliumex/hummingbot:$TAG
+
 # 3) Launch a new instance of hummingbot
 docker run -it --log-opt max-size=10m --log-opt max-file=5 `
 --name $INSTANCE_NAME `

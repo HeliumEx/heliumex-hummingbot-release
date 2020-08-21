@@ -35,6 +35,9 @@ mkdir $FOLDER/hummingbot_logs
 mkdir $FOLDER/hummingbot_data
 mkdir $FOLDER/hummingbot_scripts
 # 3) Launch a new instance of hummingbot
+
+docker pull heliumex/hummingbot:$TAG
+
 docker run -it --log-opt max-size=10m --log-opt max-file=5 \
 --name $INSTANCE_NAME \
 --network host \
